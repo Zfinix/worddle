@@ -1,0 +1,48 @@
+name: worddle
+description: A new Flutter project.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  bloc: ^7.0.0
+  flutter_bloc: ^7.0.0
+  intl: ^0.17.0
+  shared_preferences: ^2.0.1
+  flutter_secure_storage: ^4.1.0
+  flutter_svg: ^1.0.0
+  google_fonts: ^2.0.0
+  gap: ^2.0.0-nullsafety.1
+  fluentui_system_icons: ^1.1.156
+  # Functional programming to error handling (We'll use only the "Either" type for handling errors)
+  dartz: ^0.10.0-nullsafety.1
+  flutter_countdown_timer: ^4.1.0
+  confetti: ^0.6.0
+
+  # State management
+  hooks_riverpod: ^1.0.3
+  page_transition: ^2.0.4
+  logger: ^1.1.0
+  oktoast: ^3.1.5
+  modal_bottom_sheet: ^2.0.0
+  jiffy: ^5.0.0
+  screenshot: ^1.2.3
+  share_plus: ^3.0.4
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  bloc_test: ^8.0.0
+  mocktail: ^0.1.0
+  very_good_analysis: ^2.1.0
+
+flutter:
+  uses-material-design: true
+  generate: true
