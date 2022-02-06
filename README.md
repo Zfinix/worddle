@@ -1,5 +1,23 @@
 # Worddle
 
+A [wordle][wordle_link] game clone built in flutter.
+
+Uses `hooks_riverpod` for state management
+
+## 📸 Screen Shots
+
+<p float="left">
+<img src="https://github.com/Zfinix/worddle/blob/master/1.png?raw=true" width="200">
+<img src="https://github.com/Zfinix/worddle/blob/master/2.png?raw=true" width="200">
+<img src="https://github.com/Zfinix/worddle/blob/master/3.png?raw=true" width="200">
+</p>
+
+## To Do
+---
+    - Add Statistics
+    - Add Dark Mode
+    - Add Custom Keyboard colors
+
 ![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: MIT][license_badge]][license_link]
@@ -153,6 +171,7 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
 ```
 
 [coverage_badge]: coverage_badge.svg
+[wordle_link]: https://www.powerlanguage.co.uk/wordle/
 [flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
 [internationalization_link]: https://flutter.dev/docs/development/accessibility-and-localization/internationalization
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
