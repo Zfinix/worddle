@@ -1,6 +1,9 @@
 name: worddle
 
-on: [pull_request, push]
+on:
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
   build:
@@ -13,16 +16,20 @@ jobs:
           channel: 'beta'
 
       - name: Install Dependencies
-        run: flutter packages get
+        run: flutter packages get -v
 
       - name: Format
         run: flutter format --set-exit-if-changed lib test
 
-      - name: Analyze
-        run: flutter analyze lib test
+      - name: Build Android
+        run: flutter build apk --release -v --flavor production --target lib/main_production.dart -v
+        run: flutter build apk --release -v --flavor production --target lib/main_production.dart -v --split-per-abi
 
-      - name: Run tests
-        run: flutter test --no-pub --coverage --test-randomize-ordering-seed random
-
+      - name: Create Github Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/app/outputs/apk/release/*.apk,build/app/outputs/bundle/release/*.aab"
+          token: ${{ secrets.ACCESS_TOKEN }}
+        
       - name: Check Code Coverage
         uses: VeryGoodOpenSource/very_good_coverage@v1.1.1
