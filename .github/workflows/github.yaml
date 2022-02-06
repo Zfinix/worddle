@@ -1,6 +1,9 @@
 name: worddle
 
-on: [pull_request, push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
