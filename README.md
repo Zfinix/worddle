@@ -4,6 +4,8 @@ A [wordle][wordle_link] game clone built in flutter.
 
 Uses `hooks_riverpod` for state management
 
+[![worddle](https://github.com/Zfinix/worddle/actions/workflows/main.yaml/badge.svg?branch=v0.2.4)](https://github.com/Zfinix/worddle/actions/workflows/main.yaml)
+
 ## 📸 Screen Shots
 
 <p float="left">
